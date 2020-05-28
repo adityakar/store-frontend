@@ -35,7 +35,7 @@ steps:
   - '-f'
   - 'kubernetes-deployment.yaml'
   env:
-  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-b'
+  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
   - 'CLOUDSDK_CONTAINER_CLUSTER=sample-store-cluster'
 
 # This step deploys the new version of our container image
@@ -47,6 +47,6 @@ steps:
   - '-f'
   - 'kubernetes-service.yaml'
   env:
-  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-b'
+  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
   - 'CLOUDSDK_CONTAINER_CLUSTER=sample-store-cluster'
 # [END cloudbuild]
