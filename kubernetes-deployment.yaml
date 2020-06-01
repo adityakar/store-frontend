@@ -23,6 +23,11 @@ spec:
         ports:
         - name: http-server
           containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: "/health-check"
+            port: 8080
+          initialDelaySeconds: 20
         env:
         - name: PORT
           value: "8080"

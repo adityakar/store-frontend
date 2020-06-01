@@ -39,6 +39,12 @@ app.listen(PORT, () => {
   console.log('Press Ctrl+C to quit.');
 });
 
+// Handles GET requests to health check probe
+router.get('/health-check', (req, res) => {
+  console.log(`received request: ${req.method} ${req.url}`)
+  res.send('Up');
+});
+
 // Handles GET request to /
 router.get("/", (req, res) => {
     // retrieve list of messages from the backend, and use them to render the HTML template
