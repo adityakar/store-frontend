@@ -6,11 +6,12 @@ metadata:
     app: nodejs-store
     tier: frontend
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: nodejs-store
     tier: frontend
   ports:
-  - port: 80
+  - name: http-frontend
+    port: 80
     targetPort: 8080
     protocol: TCP
