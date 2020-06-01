@@ -52,7 +52,7 @@ steps:
 
 # This step deploys the new version of our container image
 - name: 'gcr.io/cloud-builders/kubectl'
-  id: Deploy Service
+  id: Deploy Virtual Service
   args:
   - 'apply'
   - '-f'
