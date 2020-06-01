@@ -32,4 +32,4 @@ spec:
         - name: PORT
           value: "8080"
         - name: GUESTBOOK_API_ADDR
-          value: backend-virtual-service:8080
+          value: nodejs-store-backend:8080
